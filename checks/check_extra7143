@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+# Prowler - the handy cloud security tool (copyright 2018) by Toni de la Fuente
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may not
+# use this file except in compliance with the License. You may obtain a copy
+# of the License at http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software distributed
+# under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+# CONDITIONS OF ANY KIND, either express or implied. See the License for the
+# specific language governing permissions and limitations under the License.
+CHECK_ID_extra7143="7.143"
+CHECK_TITLE_extra7143="[extra7143] Check if EFS have policies which allow access to everyone (Not Scored) (Not part of CIS benchmark)"
+CHECK_SCORED_extra7143="NOT_SCORED"
+CHECK_TYPE_extra7143="EXTRA"
+CHECK_SEVERITY_extra7143="Critical"
+CHECK_ASFF_RESOURCE_TYPE_extra7143="AwsEFS"
+CHECK_ALTERNATE_check7143="extra7143"
+CHECK_SERVICENAME_extra7143="efs"
+CHECK_RISK_extra7143='EFS accessible to everyone could expose sensible data to bad actors'
+CHECK_REMEDIATION_extra7143='Ensure efs has some policy but it does not have principle as *'
+CHECK_DOC_extra7143='https://docs.aws.amazon.com/efs/latest/ug/access-control-block-public-access.html'
+CHECK_CAF_EPIC_extra7143='Data Protection'
+
+extra7143(){
+  # "Check if EFS have policies which allow access to everyone (Not Scored) (Not part of CIS benchmark)"
+  for region in $REGIONS; do
+  LIST_OF_EFS_IDS=$($AWSCLI efs describe-file-systems $PROFILE_OPT --region $region --query FileSystems[*].FileSystemId --output text|xargs -n1)
+  if [[ $LIST_OF_EFS_IDS ]]; then
+    for efsId in $LIST_OF_EFS_IDS;do
+      EFS_POLICY_STATEMENTS=$($AWSCLI efs $PROFILE_OPT describe-file-system-policy --region $region --file-system-id $efsId --output json --query Policy 2>&1)
+      if [[ $EFS_POLICY_STATEMENTS == *PolicyNotFound* ]]; then
+        textFail "$region:  EFS: $efsId doesn't have any policy which means it grants full access to any client" "$region" "$efsId"
+      else
+        EFS_POLICY_BAD_STATEMENTS=$(echo $EFS_POLICY_STATEMENTS | jq '. | fromjson' | jq '.Statement[] | select(.Effect=="Allow") | select(.Principal=="*" or .Principal.AWS=="*" or .Principal.CanonicalUser=="*")')
+        if [[ $EFS_POLICY_BAD_STATEMENTS != "" ]]; then
+          textFail "$region: EFS: $efsId has policy which allows access to everyone" "$region" "$efsId"
+        else
+          textPass "$region: EFS: $efsId has policy which does not allow access to everyone" "$region" "$efsId"
+        fi
+      fi
+    done
+
+  else
+    textInfo "$region: No EFS found" "$region"
+  fi
+ done
+}
