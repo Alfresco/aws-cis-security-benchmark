@@ -15,7 +15,7 @@ GROUP_ID[18]='iso27001'
 GROUP_NUMBER[18]='18.0'
 GROUP_TITLE[18]='ISO 27001:2013 Readiness - ONLY AS REFERENCE - [iso27001] *****'
 GROUP_RUN_BY_DEFAULT[18]='N' # run it when execute_all is called
-GROUP_CHECKS[18]='check11,check110,check111,check112,check113,check114,check115,check116,check119,check12,check122,check13,check14,check15,check16,check17,check18,check19,check21,check22,check23,check24,check25,check26,check27,check28,check29,check31,check310,check311,check312,check313,check314,check32,check33,check34,check35,check36,check37,check38,check39,check41,check42,check43,check44,extra71,extra710,extra7100,extra711,extra7113,extra7123,extra7125,extra7126,extra7128,extra7129,extra713,extra714,extra7130,extra718,extra719,extra72,extra720,extra721,extra722,extra723,extra724,extra725,extra726,extra727,extra728,extra729,extra731,extra73,extra731,extra735,extra739,extra74,extra741,extra747,extra748,extra75,extra756,extra757,extra758,extra759,extra76,extra760,extra761,extra762,extra763,extra764,extra765,extra767,extra768,extra769,extra77,extra771,extra772,extra774,extra776,extra777,extra778,extra78,extra789,extra79,extra790,extra792,extra793,extra794,extra795,extra796,extra798'
+GROUP_CHECKS[18]='check11,check110,check111,check112,check113,check114,check115,check116,check119,check12,check122,check13,check14,check15,check16,check17,check18,check19,check21,check22,check23,check24,check25,check26,check27,check28,check29,check31,check310,check311,check312,check313,check314,check32,check33,check34,check35,check36,check37,check38,check39,check41,check42,check43,check44,extra71,extra710,extra7100,extra711,extra7113,extra7123,extra7125,extra7126,extra7128,extra7129,extra713,extra714,extra7130,extra718,extra719,extra72,extra720,extra721,extra722,extra723,extra724,extra725,extra726,extra727,extra728,extra729,extra731,extra73,extra731,extra735,extra739,extra74,extra741,extra747,extra748,extra75,extra757,extra758,extra759,extra76,extra760,extra761,extra762,extra763,extra764,extra765,extra767,extra768,extra769,extra77,extra771,extra772,extra774,extra776,extra777,extra778,extra78,extra789,extra79,extra790,extra792,extra793,extra794,extra795,extra796,extra798'
 
 # #	Category	Objective ID	Objective Name	Prowler check ID	Check Summary
 # 1		A.9 Access Control	A.9.2	User Access Management	check122	Ensure IAM policies that allow full "*:*" administrative privileges are not created.
@@ -66,13 +66,13 @@ GROUP_CHECKS[18]='check11,check110,check111,check112,check113,check114,check115,
 # 46	A.9 Access Control	A.9.4	System and Application Access Control	check14	Ensure access keys are rotated every 90 days or less
 # 47	A.9 Access Control	A.9.4	System and Application Access Control	check13	Ensure credentials unused for 90 days or greater are disabled
 # 48	A.9 Access Control	A.9.4	System and Application Access Control	check112	Ensure no root account access key exists
+# 55    A.9 Access Control	A.9.4	System and Application Access Control	extra711	Check if Redshift cluster is Public Accessible
 # 49	A.9 Access Control	A.9.4	System and Application Access Control	extra7113	Check if RDS instances have deletion protection enabled
 # 50	A.9 Access Control	A.9.4	System and Application Access Control	extra72	Ensure there are no EBS Snapshots set as Public
 # 51	A.9 Access Control	A.9.4	System and Application Access Control	extra723	Check if RDS Snapshots and Cluster Snapshots are public
 # 52    A.9 Access Control	A.9.4	System and Application Access Control	extra727	Check if SQS queues have policy set as Public
 # 53    A.9 Access Control	A.9.4	System and Application Access Control	extra73	Ensure there are no S3 buckets open to Everyone or Any AWS user
 # 54    A.9 Access Control	A.9.4	System and Application Access Control	extra731	Check if SNS topics have policy set as Public
-# 55    A.9 Access Control	A.9.4	System and Application Access Control	extra756	Check if Redshift cluster is Public Accessible
 # 56    A.9 Access Control	A.9.4	System and Application Access Control	extra76	Ensure there are no EC2 AMIs set as Public
 # 57    A.9 Access Control	A.9.4	System and Application Access Control	extra77 Ensure there are no ECR repositories set as Public
 # 58    A.9 Access Control	A.9.4	System and Application Access Control	extra771 Check if S3 buckets have policies which allow WRITE access

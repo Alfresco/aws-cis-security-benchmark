@@ -15,7 +15,7 @@ GROUP_ID[15]='pci'
 GROUP_NUMBER[15]='15.0'
 GROUP_TITLE[15]='PCI-DSS v3.2.1 Readiness - ONLY AS REFERENCE - [pci] **********'
 GROUP_RUN_BY_DEFAULT[15]='N' # run it when execute_all is called
-GROUP_CHECKS[15]='check11,check12,check13,check14,check15,check16,check17,check18,check19,check110,check112,check113,check114,check116,check21,check23,check25,check26,check27,check28,check29,check314,check36,check38,check43,extra713,extra717,extra718,extra72,extra729,extra735,extra738,extra740,extra744,extra748,extra75,extra750,extra751,extra753,extra754,extra755,extra756,extra773,extra78,extra780,extra781,extra782,extra783,extra784,extra785,extra787,extra788,extra798'
+GROUP_CHECKS[15]='check11,check12,check13,check14,check15,check16,check17,check18,check19,check110,check112,check113,check114,check116,check21,check23,check25,check26,check27,check28,check29,check314,check36,check38,check43,extra711,extra713,extra717,extra718,extra72,extra729,extra735,extra738,extra740,extra744,extra748,extra75,extra750,extra751,extra753,extra754,extra755,extra773,extra78,extra780,extra781,extra782,extra783,extra784,extra785,extra787,extra788,extra798'
 
 # Resources:
 # https://github.com/toniblyx/prowler/issues/296
@@ -39,7 +39,7 @@ GROUP_CHECKS[15]='check11,check12,check13,check14,check15,check16,check17,check1
 #     Ensure the default security group restricts all traffic check43
 #     Remove unused security groups extra75
 #     RDS should not have Public interface open to a public scope extra78
-#     Check for Publicly Accessible Redshift Clusters extra756
+#     Check for Publicly Accessible Redshift Clusters extra711
 #     Ensure Lambda Functions are not publicly accessible   extra798
 
 # 3.2 Requirement 2: Do Not Use Vendor-Supplied Defaults for System Passwords and Other Security Parameters

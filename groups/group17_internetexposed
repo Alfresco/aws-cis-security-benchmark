@@ -15,7 +15,7 @@ GROUP_ID[17]='internet-exposed'
 GROUP_NUMBER[17]='17.0'
 GROUP_TITLE[17]='Find resources exposed to the internet - [internet-exposed] ***'
 GROUP_RUN_BY_DEFAULT[17]='N' # run it when execute_all is called
-GROUP_CHECKS[17]='check41,check42,check45,check46,extra72,extra73,extra74,extra76,extra77,extra78,extra79,extra710,extra711,extra716,extra723,extra727,extra731,extra736,extra738,extra745,extra748,extra749,extra750,extra751,extra752,extra753,extra754,extra755,extra756,extra770,extra771,extra778,extra779,extra787,extra788,extra795,extra796,extra798,extra7102,extra7134,extra7135,extra7136,extra7137,extra7138'
+GROUP_CHECKS[17]='check41,check42,check45,check46,extra72,extra73,extra74,extra76,extra77,extra78,extra79,extra710,extra711,extra716,extra723,extra727,extra731,extra736,extra738,extra745,extra748,extra749,extra750,extra751,extra752,extra753,extra754,extra755,extra770,extra771,extra778,extra779,extra787,extra788,extra795,extra796,extra798,extra7102,extra7134,extra7135,extra7136,extra7137,extra7138'
 
 # 4.1 [check41] Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to port 22 (Scored)  [group4, cislevel1, cislevel2]
 # 4.2 [check42] Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to port 3389 (Scored)  [group4, cislevel1, cislevel2]
@@ -42,7 +42,6 @@ GROUP_CHECKS[17]='check41,check42,check45,check46,extra72,extra73,extra74,extra7
 # 7.53 [extra753] Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to MongoDB ports 27017 and 27018    [extras]
 # 7.54 [extra754] Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Cassandra ports 7199 or 9160 or 8888    [extras]
 # 7.55 [extra755] Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Memcached port 11211    [extras]
-# redundant 7.56 [extra756] Check if Redshift cluster is Public Accessible    [extras]
 # 7.70 [extra770] Check for internet facing EC2 instances with Instance Profiles attached    [extras]
 # 7.78 [extra778] Find VPC security groups with wide-open public IPv4 CIDR ranges (non-RFC1918)    [extras]
 # 7.79 [extra779] Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports   [extras, elasticsearch]
