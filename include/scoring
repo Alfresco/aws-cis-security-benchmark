@@ -22,7 +22,7 @@ scoring(){
 
   # TOTAL_RESOURCES=$(awk "BEGIN {print $FAIL_COUNTER+$PASS_COUNTER; exit}")
   TOTAL_RESOURCES=$(($FAIL_COUNTER + $PASS_COUNTER))
-  # Score is % of passed compared to failures. The higher score, the better
+  # Score is % of passed compared to failures. The higher the better
   PROWLER_SCORE=$(( $PASS_COUNTER * 100 / $TOTAL_RESOURCES ))
 
   if [[ $SCORING == "1" ]]; then
@@ -47,7 +47,7 @@ scoring(){
     echo -e "$BLUE------------------------------------------------------------------ $NORMAL"
     echo -e " Checks Performed =$NOTICE $CHECKS_COUNTER $NORMAL"
     echo -e "$BLUE------------------------------------------------------------------ $NORMAL"
-    echo -e " * the highest the better (0 to 100)$NORMAL"
+    echo -e " * the higher the better (0 to 100)$NORMAL"
     echo -e " Prowler scoring uses any check, including CIS not scored checks$NORMAL"
   fi 
   if [[ "${MODES[@]}" =~ "html" ]]; then
