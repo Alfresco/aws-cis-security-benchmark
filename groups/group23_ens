@@ -15,7 +15,7 @@ GROUP_ID[23]='ens'
 GROUP_NUMBER[23]='23.0'
 GROUP_TITLE[23]='ENS Esquema Nacional de Seguridad security checks - [ens] *****'
 GROUP_RUN_BY_DEFAULT[23]='N' # run it when execute_all is called
-GROUP_CHECKS[23]='extra733,extra7123,check13,check14,check121,extra7100,check120,check116,extra7124,check12,extra7125,check14,check13,check21,check25,extra7127,check35,check24,check31,check36,check32,check33,check34,check22,extra71,check23,check23,check27,check37,extra736,extra737,extra713,check21,check29,extra793,extra792,extra764,extra738,check43,extra74,extra710,extra75,check41,check42,extra749,extra750,extra751,extra752,extra753,extra754,extra755,extra7128,extra729,extra761,extra740,extra735,extra734,extra728,extra781,extra773,extra744,extra7126,extra7129'
+GROUP_CHECKS[23]='extra733,extra7123,check13,check14,check121,extra7100,check120,check116,extra7124,check12,extra7125,check14,check13,check21,check25,extra7127,check35,check24,check31,check36,check32,check33,check34,check22,extra71,check23,check23,check27,check37,extra736,check28,extra713,check21,check29,extra793,extra792,extra764,extra738,check43,extra74,extra710,extra75,check41,check42,extra749,extra750,extra751,extra752,extra753,extra754,extra755,extra7128,extra729,extra761,extra740,extra735,extra734,extra728,extra781,extra773,extra744,extra7126,extra7129'
 
 # ENS Control ID for AWS;Prowler checks that apply
 # ens-op.acc.1.aws.iam.1;extra733
@@ -49,7 +49,7 @@ GROUP_CHECKS[23]='extra733,extra7123,check13,check14,check121,extra7100,check120
 # ens-op.exp.10.aws.trail.5;check27
 # ens-op.exp.11.aws.kms.1;check37
 # ens-op.exp.11.aws.kms.2;extra736*
-# ens-op.exp.11.aws.kms.3;extra737
+# ens-op.exp.11.aws.kms.3;check28
 # ens-op.mon.1.aws.duty.1;extra713
 # ens-op.mon.1.aws.trail.1;check21
 # ens-op.mon.1.aws.flow.1;check29
